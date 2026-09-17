@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Winspeed Engineering Works | Industrial Water Cooling, Ventilation &amp; Natural Skylights</title>
+<meta name="description" content="Winspeed provides Water Cooling Systems, Factory Ventilation, Evaporative Air Cooling and Sunoptics Prismatic Skylight systems for garment and industrial factories in Vietnam, Indonesia, Malaysia, Cambodia and Haiti.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+  /* ============================= TOKENS ============================= */
+  :root{
+    --navy-950:#071b2e;
+    --navy-900:#0b2a45;
+    --navy-800:#123a5c;
+    --navy-700:#1b4a70;
+    --navy-600:#265d87;
+    --cyan-500:#2fb6d9;
+    --cyan-400:#5cc9e6;
+    --cyan-100:#e4f7fc;
+    --red-600:#c8202a;
+    --red-700:#9f161f;
+    --gray-100:#f5f7f9;
+    --gray-200:#e9edf1;
+    --gray-300:#d7dee4;
+    --gray-500:#8a97a3;
+    --gray-700:#546270;
+    --ink:#0d1b28;
+    --white:#ffffff;
+
+    --font-display:'Big Shoulders Display', sans-serif;
+    --font-body:'Inter', sans-serif;
+
+    --container:1240px;
+    --radius-s:3px;
+    --radius-m:6px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
+  }
+
+  body{
+    margin:0;
+    font-family:var(--font-body);
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  ul{margin:0;padding:0;list-style:none;}
+  section{position:relative;}
+
+  .wrap{
+    max-width:var(--container);
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  h1,h2,h3,h4{
+    font-family:var(--font-display);
+    font-weight:800;
+    line-height:1.02;
+    margin:0;
+    letter-spacing:0.2px;
+  }
+
+  .eyebrow{
+    font-family:var(--font-body);
+    font-weight:700;
+    font-size:13px;
+    color:var(--cyan-500);
+    letter-spacing:0.02em;
+  }
+
+  .section-head{
+    max-width:640px;
+    margin-bottom:48px;
+  }
+  .section-head h2{
+    font-size:clamp(32px,4.4vw,52px);
+    color:var(--navy-900);
+    margin-top:10px;
+  }
+  .section-head p{
+    color:var(--gray-700);
+    font-size:17px;
+    margin-top:16px;
+  }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:14px 26px;
+    border-radius:var(--radius-s);
+    font-weight:700;
+    font-size:15px;
+    border:2px solid transparent;
+    cursor:pointer;
+    transition:transform .15s ease, background .2s ease, border-color .2s ease, color .2s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-red{background:var(--red-600); color:var(--white);}
+  .btn-red:hover{background:var(--red-700);}
+  .btn-outline{border-color:rgba(255,255,255,0.55); color:var(--white);}
+  .btn-outline:hover{border-color:#fff; background:rgba(255,255,255,0.08);}
+  .btn-navy{background:var(--navy-900); color:#fff;}
+  .btn-navy:hover{background:var(--navy-800);}
+
+  /* ============================= NAV ============================= */
+  header.site-nav{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(255,255,255,0.97);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--gray-200);
+  }
+  .nav-inner{
+    max-width:var(--container);
+    margin:0 auto;
+    padding:14px 32px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+  }
+  .logo-link{display:flex;align-items:center;gap:10px;}
+  .logo-link img{height:38px;width:auto;}
+  nav.main-links{display:flex;align-items:center;gap:2px;}
+  nav.main-links a{
+    padding:10px 14px;
+    font-size:14.5px;
+    font-weight:600;
+    color:var(--navy-900);
+    border-radius:var(--radius-s);
+    transition:color .15s ease, background .15s ease;
+    white-space:nowrap;
+  }
+  nav.main-links a:hover{background:var(--gray-100); color:var(--red-600);}
+  .nav-cta{flex-shrink:0;}
+  .nav-toggle{display:none;}
+
+  /* ============================= HERO ============================= */
+  .hero{
+    position:relative;
+    min-height:88vh;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    background:var(--navy-950);
+  }
+  .hero-bg{
+    position:absolute;inset:0;
+    background-image:url('image/BackgroundHeader.png');
+    background-size:cover;
+    background-position:center 65%;
+    filter:saturate(1.03);
+  }
+  .hero-bg::after{
+    content:"";
+    position:absolute; inset:0;
+    background:linear-gradient(100deg, rgba(7,27,46,0.97) 12%, rgba(7,27,46,0.86) 38%, rgba(11,42,69,0.55) 62%, rgba(11,42,69,0.25) 100%);
+  }
+  .hero-flow{
+    position:absolute; left:0; right:0; bottom:-2px; height:180px;
+    pointer-events:none;
+  }
+  .hero-flow svg{width:100%;height:100%;display:block;}
+  .hero-flow path{ animation: flowmove 14s linear infinite; }
+  @keyframes flowmove{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-320px);}
+  }
+  .hero-content{
+    position:relative;
+    z-index:2;
+    max-width:720px;
+    padding:120px 32px 100px;
+  }
+  .hero-tag{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:rgba(200,32,42,0.16);
+    border:1px solid rgba(200,32,42,0.55);
+    color:#ff8f8f;
+    padding:7px 14px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:700;
+    margin-bottom:22px;
+  }
+  .hero-tag span.dot{width:7px;height:7px;border-radius:50%;background:#ff5050;display:inline-block;}
+  .hero h1{
+    color:#fff;
+    font-size:clamp(38px,6vw,66px);
+    line-height:1.02;
+  }
+  .hero h1 em{
+    font-style:normal;
+    color:var(--cyan-400);
+  }
+  .hero .hero-sub{
+    color:#d3e2ee;
+    font-size:16.5px;
+    max-width:560px;
+    margin-top:22px;
+  }
+  .hero .hero-facts{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px 14px;
+    margin-top:26px;
+  }
+  .hero .hero-facts span{
+    font-size:13.5px;
+    font-weight:600;
+    color:#eaf3f9;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.16);
+    padding:8px 13px;
+    border-radius:30px;
+  }
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px;}
+
+  /* ============================= MARQUEE ============================= */
+  .marquee-band{
+    background:var(--navy-900);
+    padding:26px 0;
+    overflow:hidden;
+    border-bottom:1px solid var(--navy-800);
+  }
+  .marquee-label{
+    color:#9fb6c9;
+    font-size:12.5px;
+    font-weight:700;
+    letter-spacing:.02em;
+    text-align:center;
+    margin-bottom:16px;
+  }
+  .marquee-track{
+    display:flex;
+    width:max-content;
+    gap:56px;
+    animation:scrollmarq 42s linear infinite;
+  }
+  .marquee-track img{height:34px;width:auto;object-fit:contain;filter:grayscale(1) brightness(1.6);opacity:.85;}
+  @keyframes scrollmarq{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-50%);}
+  }
+  .region-strip{
+    background:var(--navy-950);
+    color:#8fa6ba;
+    text-align:center;
+    font-size:13.5px;
+    font-weight:600;
+    padding:12px 0;
+    letter-spacing:.03em;
+  }
+  .region-strip strong{color:#fff;}
+
+  /* ============================= GENERIC SECTION PADDING ============================= */
+  .section-pad{padding:100px 0;}
+  .bg-gray{background:var(--gray-100);}
+  .bg-navy{background:var(--navy-900); color:#fff;}
+  .bg-navy .section-head h2{color:#fff;}
+  .bg-navy .section-head p{color:#b9cbdb;}
+
+  /* ============================= ABOUT ============================= */
+  .about-grid{
+    display:grid;
+    grid-template-columns:0.85fr 1.15fr;
+    gap:64px;
+    align-items:start;
+  }
+  .about-photo{position:relative;}
+  .about-photo img{border-radius:var(--radius-m); box-shadow:0 24px 50px -20px rgba(11,42,69,0.35);}
+  .about-photo .stat-card{
+    position:absolute; bottom:-26px; right:-26px;
+    background:var(--white); border:1px solid var(--gray-200);
+    padding:20px 24px; border-radius:var(--radius-m);
+    box-shadow:0 20px 40px -18px rgba(11,42,69,0.3);
+  }
+  .about-photo .stat-card .num{font-family:var(--font-display); font-size:40px; color:var(--red-600); font-weight:800; line-height:1;}
+  .about-photo .stat-card .lbl{font-size:12.5px; color:var(--gray-700); font-weight:600; margin-top:4px;}
+
+  .about-copy p{color:var(--gray-700); font-size:16px;}
+  .about-copy .lede{font-size:19px; color:var(--navy-900); font-weight:600; margin-bottom:18px;}
+
+  .brand-cloud{
+    display:flex; flex-wrap:wrap; gap:8px;
+    margin:22px 0 8px;
+  }
+  .brand-cloud span{
+    font-size:13px; font-weight:600; color:var(--navy-800);
+    background:var(--gray-100); border:1px solid var(--gray-300);
+    padding:6px 12px; border-radius:20px;
+  }
+  .trademark-note{font-size:12px; color:var(--gray-500); margin-top:14px;}
+
+  .about-feature-row{
+    display:grid; grid-template-columns:1fr 1fr; gap:24px;
+    margin-top:44px;
+  }
+  .feature-card{
+    background:var(--white); border:1px solid var(--gray-200); border-radius:var(--radius-m);
+    overflow:hidden;
+  }
+  .feature-card img{height:170px; width:100%; object-fit:cover;}
+  .feature-card .fc-body{padding:22px 24px;}
+  .feature-card h4{font-size:20px; color:var(--navy-900);}
+  .feature-card p{color:var(--gray-700); font-size:14.5px; margin-top:8px;}
+
+  /* ============================= GREEN COOLING ============================= */
+  .gc-principle{
+    display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center;
+    margin-bottom:80px;
+  }
+  .gc-principle p{color:#c3d5e3; font-size:15.5px;}
+  .gc-principle img{border-radius:var(--radius-m);}
+
+  .gc-compare{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:24px;
+    margin-top:16px;
+  }
+  .gc-card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.14);
+    border-radius:var(--radius-m);
+    padding:28px 26px;
+  }
+  .gc-card .ic{
+    width:46px;height:46px;border-radius:50%;
+    background:rgba(47,182,217,0.18); border:1px solid rgba(47,182,217,0.5);
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:16px;
+  }
+  .gc-card h4{font-size:19px; color:#fff;}
+  .gc-card p{color:#b9cbdb; font-size:14px; margin-top:8px;}
+
+  .gc-go-green{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:24px;
+    margin-top:60px;
+  }
+  .gg-card h4{color:var(--cyan-400); font-size:20px;}
+  .gg-card{border-left:3px solid var(--cyan-500); padding-left:20px;}
+  .gg-card ul{margin-top:12px;}
+  .gg-card li{color:#c3d5e3; font-size:14px; margin-bottom:8px; padding-left:16px; position:relative;}
+  .gg-card li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;background:var(--red-600);border-radius:50%;}
+
+  /* ============================= PRODUCTS ============================= */
+  .tabs-bar{
+    display:flex; gap:8px; flex-wrap:wrap;
+    border-bottom:1px solid var(--gray-300);
+    margin-bottom:48px;
+  }
+  .tab-btn{
+    padding:14px 20px; font-weight:700; font-size:14.5px; color:var(--gray-700);
+    border-bottom:3px solid transparent; cursor:pointer; background:none; border-top:none; border-left:none; border-right:none;
+    font-family:var(--font-body);
+    transition:color .15s ease, border-color .15s ease;
+  }
+  .tab-btn.active, .tab-btn:hover{color:var(--navy-900); border-color:var(--red-600);}
+  .tab-panel{display:none;}
+  .tab-panel.active{display:block;}
+
+  .cat-intro{color:var(--gray-700); font-size:15.5px; max-width:680px; margin-bottom:36px;}
+
+  .product-grid{
+    display:grid; grid-template-columns:repeat(2,1fr); gap:28px;
+  }
+  .product-card{
+    background:var(--white); border:1px solid var(--gray-200); border-radius:var(--radius-m);
+    overflow:hidden; display:flex; flex-direction:column;
+    transition:box-shadow .2s ease, transform .2s ease;
+  }
+  .product-card:hover{box-shadow:0 22px 44px -22px rgba(11,42,69,0.28); transform:translateY(-3px);}
+  .product-media{
+    aspect-ratio:16/10.5; overflow:hidden; background:var(--gray-100);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .product-media img{width:100%;height:100%;object-fit:contain; transition:transform .35s ease;}
+  .product-card:hover .product-media img{transform:scale(1.04);}
+  .product-body{padding:26px 28px 28px; display:flex; flex-direction:column; flex:1;}
+  .product-kicker{font-size:12px; font-weight:700; color:var(--red-600); letter-spacing:.02em; margin-bottom:8px;}
+  .product-body h3{font-size:23px; color:var(--navy-900); font-weight:800;}
+  .product-body .desc{color:var(--gray-700); font-size:14.5px; margin-top:10px;}
+
+  .spec-table{width:100%; border-collapse:collapse; margin-top:18px; font-size:13.5px;}
+  .spec-table tr{border-top:1px solid var(--gray-200);}
+  .spec-table tr:first-child{border-top:none;}
+  .spec-table td{padding:9px 0; vertical-align:top;}
+  .spec-table td:first-child{color:var(--gray-500); font-weight:600; width:40%;}
+  .spec-table td:last-child{color:var(--ink); font-weight:500;}
+
+  .card-cta{
+    margin-top:22px; display:inline-flex; align-items:center; gap:8px;
+    font-weight:700; font-size:14px; color:var(--navy-900);
+    padding-top:14px; border-top:1px dashed var(--gray-300);
+  }
+  .card-cta svg{transition:transform .15s ease;}
+  .product-card:hover .card-cta svg{transform:translateX(4px);}
+
+  .note-box{
+    background:var(--cyan-100); border:1px solid #bfe8f2; color:var(--navy-800);
+    font-size:13.5px; padding:12px 16px; border-radius:var(--radius-s); margin-top:16px;
+  }
+
+  .trading-panel{
+    background:var(--navy-900); color:#fff; border-radius:var(--radius-m);
+    padding:44px; display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:center;
+    margin-top:10px;
+  }
+  .trading-panel h3{font-size:26px; color:#fff;}
+  .trading-panel p{color:#c3d5e3; font-size:15px; margin-top:12px;}
+  .trading-panel .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;}
+  .trading-panel .tags span{background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.22); padding:6px 12px; border-radius:20px; font-size:12.5px; font-weight:600;}
+
+  /* ============================= PROJECT SHOWCASE ============================= */
+  .project-scroller{
+    display:grid; grid-auto-flow:column; grid-auto-columns:300px;
+    gap:22px; overflow-x:auto; padding-bottom:20px; scroll-snap-type:x mandatory;
+    margin:0 -32px; padding-left:32px; padding-right:32px;
+  }
+  .project-scroller::-webkit-scrollbar{height:8px;}
+  .project-scroller::-webkit-scrollbar-thumb{background:var(--gray-300); border-radius:10px;}
+  .project-card{
+    scroll-snap-align:start;
+    background:var(--white); border:1px solid var(--gray-200); border-radius:var(--radius-m);
+    overflow:hidden;
+  }
+  .project-card .pj-media{height:170px; overflow:hidden; background:var(--gray-100);}
+  .project-card .pj-media img{width:100%;height:100%;object-fit:cover; transition:transform .4s ease;}
+  .project-card:hover .pj-media img{transform:scale(1.06);}
+  .project-card .pj-body{padding:18px 20px 22px;}
+  .project-card h4{font-size:17px; color:var(--navy-900); font-weight:800;}
+  .project-card p{font-size:13.5px; color:var(--gray-700); margin-top:6px;}
+
+  /* ============================= CERTIFIED BRANDS ============================= */
+  .factory-cols{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:32px;
+    margin-bottom:56px;
+  }
+  .factory-col h4{font-size:15px; color:var(--navy-900); margin-bottom:12px;}
+  .factory-col ul li{font-size:13.5px; color:var(--gray-700); margin-bottom:7px; padding-left:14px; position:relative;}
+  .factory-col ul li::before{content:"";position:absolute;left:0;top:8px;width:5px;height:5px;background:var(--cyan-500);border-radius:50%;}
+
+  .brand-block h4{font-size:14px; text-transform:uppercase; letter-spacing:.04em; color:var(--gray-500); font-weight:700; margin-bottom:18px;}
+  .brand-logo-grid{
+    display:grid; grid-template-columns:repeat(6,1fr); gap:16px;
+    margin-bottom:48px;
+  }
+  .brand-logo-grid .blogo{
+    background:var(--white); border:1px solid var(--gray-200); border-radius:var(--radius-s);
+    display:flex; align-items:center; justify-content:center; padding:14px;
+    height:76px;
+  }
+  .brand-logo-grid .blogo img{max-height:44px; max-width:100%; object-fit:contain; filter:grayscale(0.15);}
+
+  /* ============================= ENGINEERING ============================= */
+  .case-study{
+    display:grid; grid-template-columns:1fr 1fr; gap:52px; align-items:center;
+    padding:56px 0; border-bottom:1px solid var(--gray-200);
+  }
+  .case-study:last-of-type{border-bottom:none;}
+  .case-study img{border-radius:var(--radius-m);}
+  .case-badge{
+    display:inline-block; background:var(--red-600); color:#fff; font-size:12px; font-weight:700;
+    padding:6px 12px; border-radius:20px; margin-bottom:14px;
+  }
+  .case-study h3{font-size:26px; color:var(--navy-900); line-height:1.2;}
+  .case-study p{color:var(--gray-700); font-size:15px; margin-top:14px;}
+  .case-study .cs-meta{margin-top:16px; font-size:14px; color:var(--gray-700);}
+  .case-study .cs-meta li{margin-bottom:6px;}
+  .case-link{display:inline-flex; align-items:center; gap:6px; margin-top:20px; font-weight:700; color:var(--navy-900); font-size:14.5px; border-bottom:2px solid var(--red-600); padding-bottom:2px;}
+
+  .eng-gallery{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:56px;
+  }
+  .eng-gallery img{border-radius:var(--radius-s); aspect-ratio:4/3; object-fit:cover; transition:transform .3s ease; cursor:pointer;}
+  .eng-gallery img:hover{transform:scale(1.03);}
+
+  /* ============================= CONTACT ============================= */
+  .contact-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:26px;
+  }
+  .office-card{
+    background:#fff; border:1px solid var(--gray-200); border-radius:var(--radius-m);
+    padding:32px 28px;
+  }
+  .office-card .flagline{font-size:12.5px; font-weight:700; color:var(--red-600); letter-spacing:.03em; margin-bottom:10px;}
+  .office-card h3{font-size:22px; color:var(--navy-900);}
+  .office-card .addr{color:var(--gray-700); font-size:14px; margin-top:12px; line-height:1.6;}
+  .office-card .people{margin-top:18px; border-top:1px solid var(--gray-200); padding-top:16px;}
+  .office-card .person{margin-bottom:14px;}
+  .office-card .person .pname{font-weight:700; font-size:14.5px; color:var(--ink);}
+  .office-card .person .prole{font-size:12.5px; color:var(--gray-500);}
+  .office-card .person a{display:block; font-size:13.5px; color:var(--navy-800); margin-top:3px;}
+  .office-card .person a:hover{color:var(--red-600);}
+  .office-card .maplink{display:inline-flex; align-items:center; gap:6px; margin-top:16px; font-size:13px; font-weight:700; color:var(--cyan-500);}
+
+  .contact-cta-row{
+    display:flex; gap:16px; flex-wrap:wrap; justify-content:center; margin-top:52px;
+  }
+
+  /* ============================= FOOTER ============================= */
+  footer{
+    background:var(--navy-950); color:#9fb2c2; padding:70px 0 30px;
+  }
+  .footer-grid{
+    display:grid; grid-template-columns:1.4fr 1fr 1fr 1.2fr; gap:40px;
+    padding-bottom:44px; border-bottom:1px solid rgba(255,255,255,0.1);
+  }
+  .footer-logo img{height:36px; margin-bottom:16px;}
+  .footer-grid p{font-size:13.5px; line-height:1.7;}
+  .footer-col h5{color:#fff; font-size:14px; margin-bottom:16px; font-weight:700;}
+  .footer-col ul li{margin-bottom:10px;}
+  .footer-col a{font-size:13.5px; color:#9fb2c2; transition:color .15s ease;}
+  .footer-col a:hover{color:var(--cyan-400);}
+  .footer-bottom{
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
+    padding-top:24px; font-size:12.5px; color:#748899;
+  }
+
+  /* ============================= RESPONSIVE ============================= */
+  @media (max-width:980px){
+    nav.main-links{display:none;}
+    .nav-toggle{display:block; background:none; border:none; cursor:pointer;}
+    .about-grid, .gc-principle, .case-study{grid-template-columns:1fr;}
+    .about-feature-row, .gc-compare, .gc-go-green{grid-template-columns:1fr;}
+    .product-grid{grid-template-columns:1fr;}
+    .factory-cols{grid-template-columns:1fr 1fr;}
+    .brand-logo-grid{grid-template-columns:repeat(3,1fr);}
+    .contact-grid{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+    .trading-panel{grid-template-columns:1fr;}
+    .eng-gallery{grid-template-columns:repeat(2,1fr);}
+    .about-photo .stat-card{position:static; margin-top:16px; display:inline-block;}
+  }
+  @media (max-width:600px){
+    .section-pad{padding:64px 0;}
+    .wrap{padding:0 20px;}
+    .hero-content{padding:100px 20px 70px;}
+    .factory-cols{grid-template-columns:1fr;}
+    .brand-logo-grid{grid-template-columns:repeat(2,1fr);}
+    .footer-grid{grid-template-columns:1fr;}
+    .footer-bottom{flex-direction:column; align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================= NAV ============================= -->
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="#home" class="logo-link">
+      <img src="image/logo_winspeed.png" alt="Winspeed logo">
+    </a>
+    <nav class="main-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#green-cooling">Green Cooling</a>
+      <a href="#products">Products</a>
+      <a href="#certified-brands">Certified Brands</a>
+      <a href="#engineering">Engineering</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="btn btn-red nav-cta">Contact Winspeed</a>
+  </div>
+</header>
+
+<!-- ============================= HERO ============================= -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-flow">
+    <svg viewBox="0 0 1200 180" preserveAspectRatio="none">
+      <path d="M-100 120 C 100 60, 300 160, 500 100 S 900 40, 1300 110" stroke="rgba(47,182,217,0.35)" stroke-width="2" fill="none"/>
+      <path d="M-100 150 C 150 100, 350 190, 550 130 S 950 70, 1350 140" stroke="rgba(255,255,255,0.12)" stroke-width="2" fill="none"/>
+    </svg>
+  </div>
+  <div class="hero-content">
+    <div class="hero-tag"><span class="dot"></span>We are the authentic SUNOPTICS in Vietnam &mdash; beware of counterfeit products in the market</div>
+    <h1>Superiority of <em>WINSPEED</em></h1>
+    <p class="hero-sub">Professional know-how, high quality materials &amp; workmanship, 18&ndash;24 months warranty, reasonable price and responsible after-sales service. We are the top vendor for Water Cooling &amp; Sunoptics Skylights in Vietnam &amp; Indonesia.</p>
+    <div class="hero-facts">
+      <span>Professional Know-how</span>
+      <span>High Quality Materials &amp; Workmanship</span>
+      <span>18&ndash;24 Months Warranty</span>
+      <span>Reasonable Price</span>
+      <span>Responsible After-Sales Service</span>
+    </div>
+    <div class="hero-cta">
+      <a href="#contact" class="btn btn-red">Contact Winspeed</a>
+      <a href="#products" class="btn btn-outline">View Products</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= BRAND MARQUEE ============================= -->
+<div class="marquee-band">
+  <div class="marquee-label">MANUFACTURING BEHIND THOSE FAMOUS BRANDS HAVE OUR SHADOW</div>
+  <div class="marquee-track" id="marqueeTrack">
+    <!-- images injected via JS for seamless loop -->
+  </div>
+</div>
+<div class="region-strip"><strong>Malaysia | Indonesia | Vietnam | Cambodia</strong> &nbsp;....now in Haiti</div>
+
+<!-- ============================= ABOUT ============================= -->
+<section class="section-pad" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-photo">
+        <img src="image/Winspeedcountry.png" alt="Winspeed engineering works">
+        <div class="stat-card">
+          <div class="num">20+</div>
+          <div class="lbl">Years in Water-Based<br>Evaporative Technology</div>
+        </div>
+      </div>
+      <div class="about-copy">
+        <span class="eyebrow">About Winspeed</span>
+        <h2 style="font-size:clamp(30px,3.6vw,44px); color:var(--navy-900); margin-top:10px; margin-bottom:22px;">Professional. Trustworthy. Economical. Efficient.</h2>
+        <p class="lede">With over 20 years of experience in Water Based Evaporated Technology and Energy Saving Concepts in mind, we provide good workmanship for the industrial and commercial markets.</p>
+        <p>In the need of a cooling and bright workspace, always go for Winspeed. Look no further!</p>
+
+        <p style="margin-top:28px; font-weight:700; color:var(--navy-900);">Winspeed is the supplier for the manufacturer/OEM factories which manufacture:</p>
+        <div class="brand-cloud">
+          <span>Under Armour</span><span>Nike</span><span>Adidas</span><span>Puma</span><span>GAP</span>
+          <span>Banana Republic</span><span>Old Navy</span><span>Calvin Klein</span><span>Forever 21</span>
+          <span>Columbia</span><span>Levi's</span><span>Abercrombie &amp; Fitch</span>
+          <span>American Eagle Outfitters</span><span>Target</span><span>Walmart</span>
+          <span>Jones New York</span><span>Mango</span><span>Kohl's</span>
+          <span>Polo Ralph Lauren</span><span>Liz Claiborne</span><span>Uniqlo</span>
+          <span>Zara</span><span>Reebok</span><span>Carter's</span><span>Oshkosh</span>
+          <span>DKNY</span><span>H&amp;M</span><span>and etc.</span>
+        </div>
+        <p class="trademark-note">** All trademarks are the property of their respective owners.</p>
+      </div>
+    </div>
+
+    <div class="about-feature-row">
+      <div class="feature-card">
+        <img src="image/Gambar6.png" alt="Excellence and professionalism">
+        <div class="fc-body">
+          <h4>Excellence and Professionalism</h4>
+          <p>Winspeed is the supplier for the largest private sportswear company from Taiwan for its factories in Vietnam. Professionalism is the first priority requirement for the project!</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <img src="image/Gambar6-1.png" alt="Insured and guaranteed">
+        <div class="fc-body">
+          <h4>Insured and Guaranteed</h4>
+          <p>Our customer is one of the largest knitwear manufacturers in the world &mdash; 1 out of every 3 Americans wears a shirt from our customer's factories around the world.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= PROJECT SHOWCASE ============================= -->
+<section class="section-pad bg-gray">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Trusted By Leading Manufacturers</span>
+      <h2>Project showcase</h2>
+      <p>A selection of factories and OEM production sites where Winspeed's cooling and skylight systems are installed.</p>
+    </div>
+    <div class="project-scroller" id="projectScroller">
+      <!-- injected via JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ============================= GREEN COOLING ============================= -->
+<section class="section-pad bg-navy" id="green-cooling">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Green Cooling Intro &mdash; with Green Concepts</span>
+      <h2>Air cooling principle</h2>
+      <p>Evaporative air cooling is a natural, age-old practice. Winspeed only builds climate-friendly cooling solutions &mdash; we are contributing to the world going green.</p>
+    </div>
+
+    <div class="gc-principle">
+      <div>
+        <p>People living in the desert use various methods of evaporative cooling &mdash; where evaporation of water is used to cool the air &mdash; when temperatures soar. The practice is not new: in the old days, people would often hang water-soaked bed sheets or blankets in windows and doorways and rely on natural wind or fans to pump air through the moist cloth to cool the room.</p>
+        <p>Evaporative air coolers &mdash; a refined concept of the age-old practice &mdash; provide an alternative to refrigerated air conditioning.</p>
+        <p style="margin-top:18px; color:#fff; font-weight:600;">Why does natural evaporation lower temperatures? Evaporation takes place throughout the day &mdash; for example, we perspire in hot weather, and the water vapour produced by sweating takes heat away from our body as it is exposed to air. Whenever dry air passes over water, the water is absorbed by the air. That is why evaporative cooling naturally occurs near waterfalls, rivers, lakes and oceans &mdash; the hotter and drier the air, the greater the water absorption.</p>
+      </div>
+      <img src="image/Gambar7.png" alt="Evaporative cooling diagram">
+    </div>
+
+    <p style="max-width:760px; color:#c3d5e3; font-size:15.5px;">Tomorrow's world needs environment-friendly, energy conserving solutions and products. With increasing global warming and environmental degradation, people around the world recognise that businesses must act responsibly and offer green products to customers. Winspeed enables people across the region to capitalise on eco-friendly, energy-saving air cooling technologies as a serious alternative to harmful and inefficient air conditioners.</p>
+
+    <h3 style="color:#fff; font-size:26px; margin-top:56px; margin-bottom:8px;">Air coolers vs. air conditioners</h3>
+    <p style="color:#b9cbdb; font-size:15px; max-width:640px;">Air coolers are green. Let's compare evaporative air coolers with air conditioners to find out what makes them green.</p>
+    <div class="gc-compare">
+      <div class="gc-card">
+        <div class="ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" stroke="#5cc9e6" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </div>
+        <h4>Energy-efficient</h4>
+        <p>Air coolers consume up to 10 times less energy than ACs. They consume less electricity and can also work in low voltage areas. Monthly electricity bills are significantly lower.</p>
+      </div>
+      <div class="gc-card">
+        <div class="ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="#5cc9e6" stroke-width="1.6"/><path d="M12 8v4l3 2" stroke="#5cc9e6" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <h4>Low maintenance</h4>
+        <p>Air coolers require low maintenance; you rarely need to summon a mechanic for maintenance or troubleshooting as in the case of ACs.</p>
+      </div>
+      <div class="gc-card">
+        <div class="ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2C8 6 5 9.5 5 13.5A7 7 0 0 0 19 13.5C19 9.5 16 6 12 2z" stroke="#5cc9e6" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </div>
+        <h4>Environmentally friendly</h4>
+        <p>Significant environmental benefits with no harmful CFC emissions and very low power consumption. Air coolers use fresh, clean air and allow windows to stay open for better circulation &mdash; ACs recirculate stale air in a sealed room.</p>
+      </div>
+    </div>
+
+    <h3 style="color:#fff; font-size:26px; margin-top:64px; margin-bottom:24px;">Go green!</h3>
+    <div class="gc-go-green">
+      <div class="gg-card">
+        <h4>Power-saving technology</h4>
+        <ul>
+          <li>We utilise high performance technology and innovation in design to achieve superior performance and dramatically reduce the energy consumed by our products.</li>
+          <li>Our energy-efficient products help consumers save money on purchase, as well as day-to-day maintenance.</li>
+        </ul>
+      </div>
+      <div class="gg-card">
+        <h4>Simplicity in design</h4>
+        <ul>
+          <li>Our sleek models eliminate the bulk and noise that characterise conventional coolers.</li>
+          <li>They are more reliable and durable than conventional air coolers, extending the product's lifespan.</li>
+          <li>Simplicity of design translates into a reliable, hassle-free air cooler that is easy to fix without compromising on style.</li>
+        </ul>
+      </div>
+      <div class="gg-card">
+        <h4>Carbon footprint reduction</h4>
+        <ul>
+          <li>Winspeed is conscious about reducing carbon footprint in our offices.</li>
+          <li>We employ rigorous recycling practices in our offices and ensure that only essential documents are printed to conserve paper.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= PRODUCTS ============================= -->
+<section class="section-pad" id="products">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Our Product Range</span>
+      <h2>Engineered for factory-scale cooling</h2>
+      <p>Explore Winspeed's product categories &mdash; from industrial ventilation and evaporative cooling to natural skylights and solar lighting.</p>
+    </div>
+
+    <div class="tabs-bar" id="tabsBar">
+      <button class="tab-btn active" data-tab="ventilation">Factory Ventilation</button>
+      <button class="tab-btn" data-tab="evapcool">Evaporative Air Cooling</button>
+      <button class="tab-btn" data-tab="skylight">Natural Prismatic Skylight</button>
+      <button class="tab-btn" data-tab="solar">LED Solar Lighting</button>
+      <button class="tab-btn" data-tab="trading">General Trading</button>
+    </div>
+
+    <!-- VENTILATION -->
+    <div class="tab-panel active" data-panel="ventilation">
+      <p class="cat-intro">Factory Water Cooling &amp; Ventilation System &mdash; galvanized steel and FRP exhaust fans built to move large volumes of air through big-box garment and manufacturing facilities.</p>
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-media"><img src="image/GambarProduct1.png" alt="Galvanized industrial exhaust fan"></div>
+          <div class="product-body">
+            <div class="product-kicker">WINSPEED&reg;</div>
+            <h3>Galvanized Industrial Exhaust Fans</h3>
+            <p class="desc">100% galvanized steel structure with 100% aluminum fan blades, built for continuous industrial exhaust duty.</p>
+            <table class="spec-table">
+              <tr><td>Voltage</td><td>3 Phase 380V</td></tr>
+              <tr><td>Power</td><td>0.55 / 0.75 / 1.1 KW</td></tr>
+              <tr><td>Exhaust Capacity</td><td>32,500 / 37,500 / 44,500 m&sup3;/Hour</td></tr>
+              <tr><td>Noise</td><td>63 / 65 dB</td></tr>
+              <tr><td>Weight</td><td>55 / 65 / 75 Kg</td></tr>
+              <tr><td>Dimensions</td><td>1380&times;1380&times;400mm (54&Prime; / WS-54x)<br>1220&times;1220&times;400mm (48&Prime; / WS-48x)<br>1060&times;1060&times;400mm (42&Prime; / WS-42x)</td></tr>
+              <tr><td>Fan Belt</td><td>Standard Belt A85-WS54</td></tr>
+              <tr><td>Motor</td><td>Made in Taiwan; assembled in China</td></tr>
+            </table>
+            <a href="#contact" class="card-cta">Request this product <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-media"><img src="image/GambarProduct2.png" alt="FRP industrial exhaust fan"></div>
+          <div class="product-body">
+            <div class="product-kicker">WINSPEED&reg; &mdash; WATER COOLING</div>
+            <h3>FRP Industrial Exhaust Fans</h3>
+            <p class="desc">Fiber-Reinforced Plastic/Polymer casing with steel support and 100% alloy fan blades.</p>
+            <table class="spec-table">
+              <tr><td>Voltage</td><td>3 Phase 380V 50Hz / 3 Phase 220V 60Hz (option)</td></tr>
+              <tr><td>Power</td><td>1.1 KW</td></tr>
+              <tr><td>Exhaust Capacity</td><td>47,000 m&sup3;/Hour (03 Alloy) | 45,000 m&sup3;/Hour (07 Chromed)</td></tr>
+              <tr><td>Noise / Weight</td><td>75&ndash;78 dB / 80 Kg</td></tr>
+              <tr><td>Dimensions</td><td>1460&times;1460&times;930mm</td></tr>
+              <tr><td>Support</td><td>Galvanized round steel with "X" supports</td></tr>
+              <tr><td>Covers</td><td>Front: Shutter &nbsp;|&nbsp; Back: Twin Door or Round Net</td></tr>
+              <tr><td>Blades</td><td>Available in 03 Blade Alloy / 07 Blade Chromed Steel</td></tr>
+              <tr><td>Motor</td><td>Made in Taiwan; assembled in China</td></tr>
+            </table>
+            <a href="#contact" class="card-cta">Request this product <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EVAPORATIVE COOLING -->
+    <div class="tab-panel" data-panel="evapcool">
+      <p class="cat-intro">Evaporative Air Cooling System &mdash; the water cooling pads and air-cooler units at the core of Winspeed's factory cooling systems.</p>
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-media"><img src="image/GambarProduct3.png" alt="Evaporative water cooling pads"></div>
+          <div class="product-body">
+            <div class="product-kicker">WINSPEED&reg;</div>
+            <h3>Evaporative Water Cooling Pads</h3>
+            <p class="desc">CELdek® is made from a special high cellulose material, which is impregnated to resist degradation.</p>
+            <p class="desc">The CELdek® unique cross-fluted design of the pads induces highly turbulent mixing of air and water for optimum heat and moisture transfer. CELdek® further enhances this design using unequal angles in the slope of the corrugations. The 45 degree and 15 degree corrugations are offset to continually direct the water to the air entry side of the pad</p>
+            <div class="note-box">Full technical specifications available on request &mdash; contact our engineering team.</div>
+            <a href="#contact" class="card-cta">Request specifications <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-media"><img src="image/Gambar1.png" alt="EVAPORATED AIR-COOLER UNITS"></div>
+          <div class="product-body">
+            <div class="product-kicker">WINSPEED&reg;</div>
+            <h3>EVAPORATED AIR-COOLER UNITS</h3>
+            <p class="desc">Permanent evaporative cooling solutions engineered to provide reliable, energy-efficient cooling for large industrial and factory spaces.</p>
+            <div class="note-box">Full technical specifications available on request &mdash; contact our engineering team.</div>
+            <table class="spec-table">
+              <tr><td>Voltage</td><td>3 Phase 380V 50Hz  / 1.1Kw (01 Speed)</td></tr>
+              <tr><td>Voltage</td><td>1 Phase 220V / 1.1kw; 0.75kw ; 0.55kw  (03 Speed)</td></tr>
+              <tr><td>Effective Area (SqM)</td><td>120-150</td></tr>
+              <tr><td>Exhaust Capacity</td><td>44,500 M3/Hour</td></tr>
+              <tr><td>Noise</td><td>70 dB</td></tr>
+              <tr><td>Weight</td><td>58 Kg</td></tr>
+              <tr><td>Dimensions</td><td>1070 x 1070 x 1090 mm</td></tr>
+              <tr><td>Water usage</td><td>20-30 Liters/Hour</td></tr>
+              <tr><td>Speed</td><td>Available in Single and Three Speed</td></tr>
+              <tr><td>Motor</td><td>Made in Taiwan; assembled in China</td></tr>
+            </table>    
+            <a href="#contact" class="card-cta">Request specifications <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-media"><img src="image/Gambar2.png" alt="Evaporative water cooling pads"></div>
+          <div class="product-body">
+            <div class="product-kicker">WINSPEED&reg;</div>
+            <h3>Portable Evaporative Air-Cooler Units</h3>
+            <p class="desc">Mobile evaporative cooling units for flexible, spot-cooling deployment on the factory floor.</p>
+            <div class="note-box">Full technical specifications available on request &mdash; contact our engineering team.</div>
+            <table class="spec-table">
+              <tr><td>Voltage</td><td>1 Phase 220V</td></tr>
+              <tr><td>Power</td><td>1.1KW</td></tr>
+              <tr><td>Exhaust Capacity</td><td>44,500 M3/Hour</td></tr>
+              <tr><td>Noise</td><td>65 dB</td></tr>
+              <tr><td>Weight</td><td>75 Kg</td></tr>
+              <tr><td>Dimensions</td><td>1380&times;1380&times;400mm (54&Prime; / WS-54x)<br>1220&times;1220&times;400mm (48&Prime; / WS-48x)<br>1060&times;1060&times;400mm (42&Prime; / WS-42x)</td></tr>
+              <tr><td>Fan Belt</td><td>Standard Belt A85-WS54</td></tr>
+              <tr><td>Motor</td><td>Made in Taiwan; assembled in China</td></tr>
+            </table>            
+            <a href="#contact" class="card-cta">Request specifications <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SKYLIGHT -->
+    <div class="tab-panel" data-panel="skylight">
+      <p class="cat-intro">Natural Prismatic Skylight System &mdash; Winspeed is the authentic SUNOPTICS representative in Vietnam and Indonesia.</p>
+      <div class="product-grid" style="grid-template-columns:1fr;">
+        <div class="product-card" style="display:grid; grid-template-columns:10fr;">
+         <div class="product-body">
+            <div class="product-kicker">SUNOPTICS&reg; VIETNAM</div>
+            <h3>Prismatic Skylight System</h3>
+            <p class="desc">We have installed over 200 pieces of Skylights in the garment factory of our valued customer, Elite Cambodia Co., Ltd. We greatly appreciate TMI Group's support in allowing us to use their video.</p>
+            <div class="note-box">We are the authentic SUNOPTICS distributor in Vietnam &mdash; beware of counterfeit products in the market.</div>
+            <div style="margin-top:20px; border-radius:6px; overflow:hidden; aspect-ratio:16/9;">
+              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/6aB9De8k0BY?wmode=transparent&amp;theme=dark&amp;rel=0" title="Sunoptics Skylights installation" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <a href="#contact" class="card-cta">Request this product <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SOLAR -->
+    <div class="tab-panel" data-panel="solar">
+      <p class="cat-intro">LED Solar Lighting &mdash; energy-independent lighting solutions to complement Winspeed's green cooling and daylighting systems.</p>
+      <div class="product-grid" style="grid-template-columns:1fr;">
+        <div class="product-card" style="display:grid; grid-template-columns:1fr 1.3fr;">
+          <div class="product-media"><img src="image/Gambar4.png" alt="Sunoptics prismatic skylight installed in factory"></div>
+          <div class="product-body">
+            <div class="product-kicker">WINSPEED&reg;</div>
+            <h3>Solar LED Lights [Powered by Solar]</h3>
+            <p class="desc">1. Solar-powered LED lighting for factory yards, walkways and exterior areas.</p>
+            <p class="desc">2. Solar-powered LED lighting for factory yards, walkways and exterior areas.</p>
+            <p class="desc">3. Led light Capacity: 50W, Light Effect: 95 lm/w, Color 5000K. High grade protection process, using with import chip-set with weather-proof.</p>
+            <p class="desc">4. 140W Solar Panel Composed of a single crystal solar cells, ultra-translucent glass backplane, power not less than 140W, high conversion efficiency.</p>
+            <p class="desc">5. LAMP POST 8M （Top）Lever 8 meters high, wall thickness of not less than 3.5mm.</p>
+            <div class="note-box">Full technical specifications available on request &mdash; contact our engineering team.</div>
+            <a href="#contact" class="card-cta">Request specifications <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRADING -->
+    <div class="tab-panel" data-panel="trading">
+      <p class="cat-intro">General Trading / Import &amp; Export.</p>
+      <div class="trading-panel">
+        <div>
+          <h3>Winspeed Trading (M) Sdn. Bhd.</h3>
+          <p>Winspeed's Malaysia entity operates under the registered name Winspeed Trading (M) Sdn. Bhd. (Co. Reg: 985896-A), supporting the group's engineering and equipment supply activities across the region.</p>
+          <div class="tags">
+            <span>Malaysia</span><span>Indonesia</span><span>Vietnam</span><span>Cambodia</span><span>Haiti</span>
+          </div>
+        </div>
+        <div>
+          <p style="color:#c3d5e3;">For import, export or general trading enquiries related to Winspeed's cooling, ventilation and skylight equipment, please reach out to the office nearest you.</p>
+          <a href="#contact" class="btn btn-red" style="margin-top:8px;">Contact our team</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= CERTIFIED BRANDS ============================= -->
+<section class="section-pad bg-gray" id="certified-brands">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Certified Brands</span>
+      <h2>Certified factories using Winspeed</h2>
+      <p>Certified factories that use Winspeed directly, and OEM partner factories that use Winspeed systems on their behalf. Winspeed always creates a better working environment for the workers.</p>
+    </div>
+
+    <h4 style="font-size:15px; color:var(--navy-900); margin-bottom:20px;">Factories installed by Winspeed Engineering</h4>
+    <div class="factory-cols">
+      <div class="factory-col">
+        <h4>Vietnam &amp; Cambodia</h4>
+        <ul>
+          <li>VN: F1, F2, F3, F4, F5</li>
+          <li>Cambodia: A, B, C</li>
+          <li>EIN VINA: 1, 2, 3, Wash</li>
+          <li>K.J Vina</li>
+          <li>Winners Vina 1, 2, Wash</li>
+          <li>PT Eind Trend F1, 2, 3, 5, Wash</li>
+          <li>PT Winners Intl 2, 3</li>
+          <li>Eins Trend Nicaragua</li>
+          <li>Sae-A Technotex</li>
+          <li>PT Starpia Uniqlo</li>
+          <li>Centexsa S.A.</li>
+          <li>S&amp;H Global Haiti F1, 2, 3, 4</li>
+          <li>Eins Cambodia F1, 2</li>
+        </ul>
+      </div>
+      <div class="factory-col">
+        <h4>Hansae Group</h4>
+        <ul>
+          <li>Hansae Cuchi: F1&ndash;12</li>
+          <li>Hansae TG: F1,2,3,5,8,9,C1,C2, Sample</li>
+          <li>Hansae TN: F1,2,3,5</li>
+          <li>Hansae KBN: F1,2,3,5,6</li>
+          <li>Hansae Karawang: F3,5,6,7</li>
+        </ul>
+        <h4 style="margin-top:22px;">Other Groups</h4>
+        <ul>
+          <li>Youngone Hungyen Co., Ltd.</li>
+          <li>Worldon Vietnam (Shenzhou International)</li>
+          <li>Sintex Intl &mdash; ESP: A1,A2,B1,B2,C1,C2, Sample</li>
+          <li>Sprinta, Sixplus, Sportex, Splendor...</li>
+        </ul>
+      </div>
+      <div class="factory-col">
+        <h4>Indonesia</h4>
+        <ul>
+          <li>PT. Poongin Indonesia</li>
+          <li>PT Torabika Eka Semesta - Mayora Group </li>
+          <li>PT Pura Barutama - Kudus</li>
+          <li>Mama Lemon, Ciptadent, Toothbrush</li>
+          <li>PT Apparel One Indonesia 1,2,3,4 - Semarang</li>
+          <li>Wings Group</li>
+          <li>Eiger Warehouse - Subang</li>
+          <li>PT Ameya Livingstyle Indonesia - Yogyakarta</li>
+          <li>PT Anggun Kreasi Garmen - Yogyakarta</li>
+          <li>Cafe Bajawa Flores NTT - Jakarta Tangerang Depok Bogor</li>
+        </ul>
+        <p style="margin-top:16px; font-size:13px; color:var(--gray-500); font-style:italic;">...and a few hundred more factories across the region.</p>
+      </div>
+    </div>
+
+    <div class="brand-block">
+      <h4>Mass Retailer's Brands</h4>
+      <div class="brand-logo-grid">
+        <div class="blogo"><img src="imgcustomer/gmbr1.png" alt="Tesco"></div>
+        <div class="blogo"><img src="imgcustomer/kohl.png" alt="Kohl's"></div>
+        <div class="blogo"><img src="imgcustomer/kirkland.jpg" alt="Kirkland"></div>
+        <div class="blogo"><img src="imgcustomer/zara1.png" alt="Zara"></div>
+        <div class="blogo"><img src="imgcustomer/walmart.png" alt="Walmart"></div>
+        <div class="blogo"><img src="imgcustomer/target.png" alt="Target"></div>
+      </div>
+    </div>
+
+    <div class="brand-block">
+      <h4>Speciality Brands</h4>
+      <div class="brand-logo-grid" id="specialityGrid">
+        <!-- injected via JS -->
+      </div>
+    </div>
+
+    <p class="trademark-note">*** The above brands are/may be registered trademarks of their respective owners.</p>
+  </div>
+</section>
+
+<!-- ============================= ENGINEERING ============================= -->
+<section class="section-pad" id="engineering">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Engineering Portfolio</span>
+      <h2>Large-scale engineering projects</h2>
+      <p>Winspeed's engineering track record includes LEED-certified factory projects and one of the largest garment-factory installations in Vietnam.</p>
+    </div>
+
+    <div class="case-study">
+      <img src="image/LEED Platinum Project.png" alt="LEED Platinum project">
+      <div>
+        <span class="case-badge">LEED Platinum &middot; 2015</span>
+        <h3>We sincerely congratulate Fashion Garments Ltd. (Exp) who won Platinum status in LEED 2015.</h3>
+        <p>We are very proud to be one of the suppliers &amp; partners in this project!</p>
+        <a href="http://www.usgbc.org/projects/fgl-tan-phu-expansion" target="_blank" rel="noopener" class="case-link">Read more on USGBC.org</a>
+      </div>
+    </div>
+
+    <div class="case-study">
+      <div>
+        <span class="case-badge">LEED Gold &middot; 2012</span>
+        <h3>In 2012, Fashion Garments Ltd. (First Factory) won Gold status in LEED 2012.</h3>
+        <p>We are very proud to be one of the suppliers &amp; partners in this project!</p>
+        <a href="http://www.usgbc.org/projects/fgl-tan-phu" target="_blank" rel="noopener" class="case-link">Read more on USGBC.org</a>
+      </div>
+      <img src="image/LEED gold projet.png" alt="LEED Gold project">
+    </div>
+
+    <div class="case-study">
+      <img src="image/Worldon Vietnam project.png" alt="Worldon Vietnam project">
+      <div>
+        <span class="case-badge">Green Concepts</span>
+        <h3>One of the largest garment factory projects in Vietnam &mdash; 2015</h3>
+        <ul class="cs-meta">
+          <li>Worldon Vietnam Co., Ltd. (Shenzhou International Group)</li>
+          <li>Shenzhou Group is the largest supplier of Adidas, Nike and Uniqlo.</li>
+          <li>Dimension: 45 hectares</li>
+        </ul></div>
+    </div>
+
+    <h3 style="font-size:24px; color:var(--navy-900); margin-top:60px;">Sunoptics Vietnam engineering portfolio</h3>
+    <div class="eng-gallery">
+      <img src="image/imgproject1.png" alt="Sunoptics Vietnam project 1">
+      <img src="image/imgproject2.png" alt="Sunoptics Vietnam project 2">
+      <img src="image/imgproject3.png" alt="Sunoptics Vietnam project 3">
+      <img src="image/imgproject4.png" alt="Sunoptics Vietnam project 4">
+      <img src="image/imgproject5.png" alt="Sunoptics Vietnam project 5">
+      <img src="image/imgproject6.png" alt="Sunoptics Vietnam project 6">
+      <img src="image/imgproject7.png" alt="Sunoptics Vietnam project 7">
+      <img src="image/Gambar5.png" alt="Sunoptics Vietnam project 8">
+    </div>
+  </div>
+</section>
+
+<!-- ============================= CONTACT ============================= -->
+<section class="section-pad bg-gray" id="contact">
+  <div class="wrap">
+    <div class="section-head" style="margin-left:auto; margin-right:auto; text-align:center;">
+      <span class="eyebrow">Get In Touch</span>
+      <h2>Contact us now!</h2>
+      <p style="margin-left:auto; margin-right:auto;">Ready for some cooling time? Write to us or give us a call &mdash; we're always happy to provide a free consultation and help with any questions.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="office-card">
+        <div class="flagline">MAIN OFFICE &mdash; MALAYSIA</div>
+        <h3>Winspeed Trading (M) Sdn. Bhd.</h3>
+        <div class="addr">
+          Co. Reg: 985896-A<br>
+          No 5 Jalan Sutere Indah 4, Taman Sutera Indah,<br>
+          Kluang 86000, Johor, Malaysia<br><br>
+          Tel: +60 (07) 772 8888<br>
+          Fax: +60 (07) 772 5118
+        </div>
+        <div class="people">
+          <div class="person">
+            <div class="pname">Ms. Ally</div>
+            <a href="tel:+60192765899">Direct: +6019-276 5899</a>
+            <a href="mailto:ally@1winspeed.com">ally@1winspeed.com</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="office-card">
+        <div class="flagline">VIETNAM</div>
+        <h3>Dai Tien Thanh Mfg. Co., Ltd.</h3>
+        <div class="addr">
+          C&ocirc;ng Ty TNHH SX-TM-DV &Ecirc;ại Ti&ecirc;n Th&agrave;nh<br>
+          (Winspeed Vietnam / Sunoptics Vietnam)<br>
+          29/6 Khu Pho 2, P. Trung My Tay,<br>
+          District 12, Ho Chi Minh City, Vietnam<br><br>
+          Tel: +84 (08) 3883 0203 &nbsp;|&nbsp; Fax: +84 (08) 3883 1178
+        </div>
+        <div class="people">
+          <div class="person">
+            <div class="pname">Mr. Tee Jiann Her</div>
+            <div class="prole">Vietnam Chief Representative</div>
+            <a href="tel:+840909699718">Direct: +84 0909 699 718</a>
+            <a href="mailto:tee@1winspeed.com">tee@1winspeed.com</a>
+          </div>
+          <div class="person">
+            <div class="pname">Mr. Y&ecirc;n Nguy&ecirc;n B&igrave;nh</div>
+            <div class="prole">Vietnam Office Manager</div>
+            <a href="tel:+840903999718">Direct: +84 0903 999 718</a>
+            <a href="mailto:byen@1winspeed.com">byen@1winspeed.com</a>
+          </div>
+        </div>
+        <a class="maplink" target="_blank" rel="noopener" href="https://maps.app.goo.gl/C3hF4GejVtjQzVyW7">View on Google Maps &rarr;</a>
+      </div>
+
+      <div class="office-card">
+        <div class="flagline">INDONESIA</div>
+        <h3>PT. Winspeed Indonesia</h3>
+        <div class="addr">
+          JL. RE. Martadinata, Komp Rukan Permata Ancol,
+          Blok N-8, Jakarta 14420, Indonesia<br><br>
+          Tel / Fax: +62 (021) 645 5358
+        </div>
+        <div class="people">
+          <div class="person">
+            <div class="pname">Mr. Lee Sun-Kiong (Akiong)</div>
+            <div class="prole">Indonesia Chief Representative</div>
+            <a href="tel:+628197502728">+62 0819 750 2728</a>
+            <a href="mailto:akiong@1winspeed.com">akiong@1winspeed.com</a>
+          </div>
+        </div>
+        <a class="maplink" target="_blank" rel="noopener" href="https://maps.app.goo.gl/8Jjt5rraBufY6hiG9">View on Google Maps &rarr;</a>
+      </div>
+    </div>
+
+    <!-- <div class="contact-cta-row">
+      <a href="mailto:ally@1winspeed.com" class="btn btn-red">Request Information</a>
+      <a href="mailto:tee@1winspeed.com" class="btn btn-navy">Contact Our Engineering Team</a>
+    </div> -->
+  </div>
+</section>
+
+<!-- ============================= FOOTER ============================= -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <img src="image/logo_winspeed.png " alt="Winspeed logo">
+        </div>
+        <p>Water Cooling System &amp; Natural Skylights.<br>Welcome to Cooler &amp; Greener World!</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#green-cooling">Green Cooling</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#certified-brands">Certified Brands</a></li>
+          <li><a href="#engineering">Engineering</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Products</h5>
+        <ul>
+          <li><a href="#products">Factory Ventilation</a></li>
+          <li><a href="#products">Evaporative Air Cooling</a></li>
+          <li><a href="#products">Natural Prismatic Skylights</a></li>
+          <li><a href="#products">LED Solar Lighting</a></li>
+          <li><a href="#products">General Trading</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:ally@1winspeed.com">ally@1winspeed.com</a></li>
+          <li><a href="mailto:tee@1winspeed.com">tee@1winspeed.com</a></li>
+          <li><a href="mailto:akiong@1winspeed.com">akiong@1winspeed.com</a></li>
+          <li><a href="tel:+60777288888">+60 (07) 772 8888</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Copyright &copy; 2017 Winspeed Engineering Works. All rights reserved. Copyright &amp; Tradename of WINSPEED TRADING (M) SDN. BHD.</span>
+      <span>All other registered trademarks are properties of their respective owners.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ---- Tabs ----
+  document.querySelectorAll('.tab-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelector('.tab-panel[data-panel="'+btn.dataset.tab+'"]').classList.add('active');
+    });
+  });
+
+  // ---- Marquee brand logos (seamless loop: render twice) ----
+  const brandLogos = [
+    ["imgcustomer/adidas.png","Adidas"],
+    ["imgcustomer/hollister.png","hollister"],
+    ["imgcustomer/gmbr1.png","tesco"],
+    ["imgcustomer/puma.png","Puma"],
+    ["imgcustomer/uniqlo.png","Uniqlo"],
+    ["imgcustomer/oldnavy.png","Old navy"],
+    ["imgcustomer/walmart.png","Wal mart"],
+    ["imgcustomer/kohl.png","Kohl"],
+    ["imgcustomer/levis.png","Levi's"],
+    ["imgcustomer/kirkland.png","Kirkland"],
+    ["imgcustomer/zara.png","Zara"],
+    ["imgcustomer/taylormade.png","taylor made"],
+  ];
+  const track = document.getElementById('marqueeTrack');
+  const doubled = brandLogos.concat(brandLogos);
+  track.innerHTML = doubled.map(([src,alt])=>`<img src="${src}" alt="${alt}">`).join('');
+
+  // ---- Speciality brand grid (single set, no duplication) ----
+  const specialityLogos = [
+    ["imgcustomer/adidas.png","Adidas"],
+    ["imgcustomer/hollister.png","hollister"],
+    ["imgcustomer/puma.png","Puma"],
+    ["imgcustomer/uniqlo.png","Uniqlo"],
+    ["imgcustomer/oldnavy.png","Old navy"],
+    ["imgcustomer/levis.png","Levi's"],
+    ["imgcustomer/taylormade.png","taylor made"],
+    ["imgcustomer/American-Eagle-logo.png","americaneagle"],
+    ["imgcustomer/coach1.png","coach"],
+    ["imgcustomer/underarmor1.jpeg","underarmour"],
+    ["imgcustomer/nike.png","NIKE"],
+    ["imgcustomer/northface.png","Northface"],
+    ["imgcustomer/abercrombie.jpeg","abercrombie"],
+    ["imgcustomer/Gap.jpeg","Gap"],
+    ["imgcustomer/ralphh.png","ralphlauren"],
+  ];
+  document.getElementById('specialityGrid').innerHTML = specialityLogos.map(([src,alt])=>
+    `<div class="blogo"><img src="${src}" alt="${alt}"></div>`
+  ).join('');
+
+  // ---- Project showcase ----
+  const projects = [
+    ["projectshowcase/elitegroup1.png","Elite Group","Another leading project with Green Concepts by Winspeed / Sunoptics Vietnam"],
+    ["projectshowcase/elitegroup2.avif","Elite Group","Beautiful night scene by Sunoptics Vietnam"],
+    ["projectshowcase/fareastern.avif","Far Eastern Group 遠東集團","Pioneer project for \u201cIndustrie 4.0\u201d of HVAC"],
+    ["projectshowcase/coastvietnam.avif","Coats Vietnam","The world's leading industrial thread manufacturer, with Winspeed cooling"],
+    ["projectshowcase/epicgroup.avif","Epic Group","L.E.E.D. Gold project (exterior) HVAC & lights by Winspeed"],
+    ["projectshowcase/epicgroup2.avif","Epic Group","L.E.E.D. Gold project (exterior) HVAC & lights by Winspeed"],
+    ["projectshowcase/tmigroup.avif","TMI Group","100% covered by the skylights, powered by Winspeed"],
+    ["projectshowcase/hirdramani.avif","Hirdaramani Group","First garment factory to obtain LEED Platinum by Winspeed (HVAC)"],
+    ["projectshowcase/hirdramani2.avif","Hirdaramani Group","First garment factory to obtain LEED Platinum (Skylights)"],
+    ["projectshowcase/nienhsing.avif","Nien Hsing Textile","One of the world's largest jeans manufacturers"],
+    ["projectshowcase/hansae.avif","Hansae Vietnam","Water Cooling System for Nike/Adidas production"],
+    ["projectshowcase/sae-a.avif","Sae-A Vietnam","Forever 21 production"],
+    ["projectshowcase/domex.avif","Domex Group","The power of green! Professional  Cooling/Air-Con Ducting System and more"]
+  ];
+  document.getElementById('projectScroller').innerHTML = projects.map(([src,name,desc])=>`
+    <div class="project-card">
+      <div class="pj-media"><img src="${src}" alt="${name}"></div>
+      <div class="pj-body"><h4>${name}</h4><p>${desc}</p></div>
+    </div>
+  `).join('');
+</script>
+
+</body>
+</html>
